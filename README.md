@@ -2,4 +2,9 @@
 
 ## Courier Board
 
-Backend APIs built in Laravel for https://explorelogics.com/courier-board/
+Backend APIs built in Laravel for https://explorelogics.com
+
+
+- Run composer install
+- Run migrations or create a database from the SQL file provided.
+- Run seeders (optional)
