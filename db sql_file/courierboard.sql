@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2023 at 02:43 PM
+-- Generation Time: Nov 06, 2023 at 01:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -88,6 +88,7 @@ CREATE TABLE `users` (
   `fname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
+  `fax` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
@@ -123,9 +124,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `fname`, `lname`, `phone`, `email`, `email_verified_at`, `password`, `mail_address_1`, `mail_address_2`, `company`, `company_type`, `city`, `state`, `country`, `zip`, `status`, `alert_email_1`, `alert_email_2`, `alert_freight`, `alert_vehicle`, `alert_rpf`, `alert_driver`, `account_no`, `title`, `phone_verified_at`, `username`, `other1`, `other2`, `other3`, `other4`, `other5`, `created_at`, `updated_at`) VALUES
-(1, 'John', 'Doe', '4567812345', 'john@gmail.com', '2023-11-03 07:35:16', '$2y$12$U0gFS5LkNMMmIRATCZsXw.MXmHgmoxoYov0xHzqa1ToHUCyScHyhe', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, 1, 1, 1, 1, '375162', NULL, NULL, 'john@gmail.com', NULL, NULL, NULL, NULL, NULL, '2023-11-03 07:35:16', '2023-11-03 07:35:16'),
-(3, 'Caleb', 'Altair', '3418710918', 'calebjanaltair@gmail.com', NULL, '$2y$12$uQbaQ1mujSDy3s73g7NTn.W8ozqL10i1W1UPLVX9bcPtvB67STCTO', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 1, 'calebjanaltair@gmail.com', NULL, 1, 1, 1, 1, '955293', NULL, NULL, 'calebjanaltair@gmail.com', NULL, NULL, NULL, NULL, NULL, '2023-11-03 08:25:15', '2023-11-03 08:25:15');
+INSERT INTO `users` (`id`, `fname`, `lname`, `phone`, `fax`, `email`, `email_verified_at`, `password`, `mail_address_1`, `mail_address_2`, `company`, `company_type`, `city`, `state`, `country`, `zip`, `status`, `alert_email_1`, `alert_email_2`, `alert_freight`, `alert_vehicle`, `alert_rpf`, `alert_driver`, `account_no`, `title`, `phone_verified_at`, `username`, `other1`, `other2`, `other3`, `other4`, `other5`, `created_at`, `updated_at`) VALUES
+(1, 'John', 'Doe', '4567812345', '4567812345', 'john@gmail.com', '2023-11-06 06:53:05', '$2y$12$L3wairozJi3cGFOGyErA8uhTU1WWhRgBG3f/rWOKoPp1SUZeXaxme', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, 1, 1, 1, 1, '382274', NULL, NULL, 'john@gmail.com', NULL, NULL, NULL, NULL, NULL, '2023-11-06 06:53:05', '2023-11-06 06:53:05'),
+(8, 'Caleb', 'Altair', '3418710918', '3418710918', 'calebjanaltair@gmail.com', NULL, '$2y$12$w7VCl0CRwboiiLY7RvPx2u6SMqV03aYKdWxbgCnOmumhE2jNrumZy', '13 Baker Street', '14 Baker Street', 'NA', 4, 'Poughkeepsie', 'Wyoming', 'United States of America', '47628', 1, 'calebjanaltair@gmail.com', NULL, 1, 1, 1, 1, '395570', 'CEO', NULL, 'calebjanaltair@gmail.com', NULL, NULL, NULL, NULL, NULL, '2023-11-06 07:27:16', '2023-11-06 07:27:16');
 
 --
 -- Indexes for dumped tables
@@ -158,6 +159,7 @@ ALTER TABLE `personal_access_tokens`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_phone_unique` (`phone`),
+  ADD UNIQUE KEY `users_fax_unique` (`fax`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
@@ -186,7 +188,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

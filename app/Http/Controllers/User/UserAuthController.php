@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
-
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
+use Illuminate\Auth\Events\Registered;
 use App\Mail\EmailVerification;
 
 
@@ -32,20 +32,48 @@ class UserAuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
+    public function homepageregister(Request $request)
+    {
+        dd($request->all());
+    }
+
     public function register(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'fname' => 'required|string|max:255',
             'lname' => 'required|string|max:255',
-            'phone' => 'required|numeric|unique:users',
+            'title' => 'required|string|max:255',
+            'phone' => 'required|string|unique:users',
+            'fax' => 'required|string|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string',
             'c_password' => 'required|string',
+
+            'company' => 'required|string|max:255',
+            'mail_address_1' => 'required|string|max:255',
+            'mail_address_2' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'zip' => 'required|string|max:255',
+            'company_type' => 'required | integer | max: 4',
+
         ]);
+        $validator->setCustomMessages([
+            'unique' => 'The :attribute is already taken.',
+        ]);
+
         if ($validator->fails()) {
-            return response()->json(array('msg' => 'error', 'response' => $validator->errors()));
+            // Check if the email validation failed and return a specific error message and status code
+            if ($validator->errors()->has('email')) {
+                return response()->json(['error' => 'Email address is already taken'], 422); // 409 Conflict
+            }
+
+            // For other validation errors
+            return response()->json(['error' => $validator->errors()], 422); // 422 Unprocessable Entity
         }
+
+        $originalPassword = $request->password;
         // dd($request->all());
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
@@ -54,10 +82,24 @@ class UserAuthController extends Controller
         $input['username'] = $input['email'];
         $user = User::create($input);
         $user = User::find($user->id);
+        $maildata = array(
+            'name' => $input['fname'] . ' ' . $input['lname'],
+            'company' => $input['company'],
+            'username' => $input['email'],
+            'password' => $originalPassword
+        );
 
-        // I'll implement email verification using this resource on github:
-        https: //github.com/lucenarenato/laravel-jwt-authentication-api-email-verification/blob/master/app/Http/Controllers/AuthController.php
-        return response()->json(array('msg' => 'success', 'response' => 'User registered successfully', 'data' => $user));
+        Mail::to($input['email'])->send(new WelcomeMail($maildata));
+        $credentials = request(['email', 'password']);
+        try {
+            if (!$token = auth()->attempt($credentials)) {
+                return response()->json(['error' => 'Incorrect email or password'], 401);
+            }
+        } catch (JWTException $e) {
+            return response()->json(array('msg' => 'error', 'response' => 'Something went wrong. Please try again.'));
+        }
+        $user = Auth::user();
+        return response()->json(array('msg' => 'success', 'response' => 'User registered successfully', 'data' => $user, 'access_token' => $token, 'token_type' => 'bearer', 'expires_in' => auth()->factory()->getTTL() * 7200));
     }
 
     public function login()

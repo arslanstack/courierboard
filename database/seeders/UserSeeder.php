@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
             'fname' => 'John',
             'lname' => 'Doe',
             'phone' => '4567812345',
+            'fax' => '4567812345',
             'email' => 'john@gmail.com',
             'email_verified_at' => now(),
             'account_no' => rand(100000, 999999),
