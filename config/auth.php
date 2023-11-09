@@ -36,11 +36,24 @@ return [
     */
 
     'guards' => [
-        'api' => [
+        'couriers' => [
+            'driver' => 'jwt',
+            'provider' => 'couriers',
+        ],
+        'admins' => [
+            'driver' => 'jwt',
+            'provider' => 'admins',
+        ],
+        'users' => [
             'driver' => 'jwt',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'users', // You can set the provider as 'users' or 'couriers' as needed.
+        ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +76,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'couriers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Courier::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [

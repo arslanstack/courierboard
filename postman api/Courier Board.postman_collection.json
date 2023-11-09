@@ -8,286 +8,1531 @@
 	},
 	"item": [
 		{
-			"name": "Auth",
+			"name": "User",
 			"item": [
 				{
-					"name": "Register",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "fname",
-									"value": "Caleb",
-									"type": "text"
+					"name": "User Auth",
+					"item": [
+						{
+							"name": "Homepage Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pickup",
+											"value": "2023-12-12",
+											"type": "text"
+										},
+										{
+											"key": "start_point",
+											"value": "23450",
+											"type": "text"
+										},
+										{
+											"key": "delivery_point",
+											"value": "14591",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "12x12x12 inches",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "4.5",
+											"type": "text"
+										},
+										{
+											"key": "pickup_time",
+											"value": "16:00:00",
+											"type": "text"
+										},
+										{
+											"key": "delivery_time",
+											"value": "13:00:00",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Long White Steel Rod",
+											"type": "text"
+										},
+										{
+											"key": "fname",
+											"value": "Muhammad",
+											"type": "text"
+										},
+										{
+											"key": "lname",
+											"value": "Arslan",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "gecepa1867@glalen.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "3418710911",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "NA",
+											"type": "text"
+										},
+										{
+											"key": "zip",
+											"value": "54792",
+											"type": "text"
+										}
+									]
 								},
-								{
-									"key": "lname",
-									"value": "Altair",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "calebjanaltair@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "3418710918",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "123456",
-									"type": "text"
-								},
-								{
-									"key": "c_password",
-									"value": "123456",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "NA",
-									"type": "text"
-								},
-								{
-									"key": "mail_address_1",
-									"value": "13 Baker Street",
-									"type": "text"
-								},
-								{
-									"key": "mail_address_2",
-									"value": "14 Baker Street",
-									"type": "text"
-								},
-								{
-									"key": "city",
-									"value": "Poughkeepsie",
-									"type": "text"
-								},
-								{
-									"key": "state",
-									"value": "Wyoming",
-									"type": "text"
-								},
-								{
-									"key": "country",
-									"value": "United States of America",
-									"type": "text"
-								},
-								{
-									"key": "company_type",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "title",
-									"value": "CEO",
-									"type": "text"
-								},
-								{
-									"key": "fax",
-									"value": "3418710918",
-									"type": "text"
-								},
-								{
-									"key": "zip",
-									"value": "47628",
-									"type": "text"
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/user/homepage-register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"user",
+										"homepage-register"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/register",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"auth",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "calebjanaltair@gmail.com",
-									"type": "text"
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fname",
+											"value": "Caleb",
+											"type": "text"
+										},
+										{
+											"key": "lname",
+											"value": "Altair",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "calebjanaltair@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "3418710917",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "NA",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_1",
+											"value": "13 Baker Street",
+											"type": "text"
+										},
+										{
+											"key": "mail_address_2",
+											"value": "14 Baker Street",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Poughkeepsie",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "Wyoming",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "United States of America",
+											"type": "text"
+										},
+										{
+											"key": "company_type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "CEO",
+											"type": "text"
+										},
+										{
+											"key": "fax",
+											"value": "3418710918",
+											"type": "text"
+										},
+										{
+											"key": "zip",
+											"value": "47628",
+											"type": "text"
+										}
+									]
 								},
-								{
-									"key": "password",
-									"value": "123456",
-									"type": "text"
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/user/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"user",
+										"register"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/login",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"auth",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Profile",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2OTkyNzM2NDIsImV4cCI6MTY5OTI3NzI0MiwibmJmIjoxNjk5MjczNjQyLCJqdGkiOiJwVkZiNW50QU1mTjNBaUlvIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o5oyjOFVN4Ene6-5XJLOC-hrpgplbDjSnXYkVrbkXcM",
-								"type": "text"
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "jabibov534@glalen.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/user/reset",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"user",
+										"reset"
+									]
+								}
 							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/me",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"auth",
-								"me"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Refresh",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2OTkyNzM2NDIsImV4cCI6MTY5OTI3NzI0MiwibmJmIjoxNjk5MjczNjQyLCJqdGkiOiJwVkZiNW50QU1mTjNBaUlvIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o5oyjOFVN4Ene6-5XJLOC-hrpgplbDjSnXYkVrbkXcM",
-								"type": "text"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/refresh",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"auth",
-								"refresh"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Logout",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY5OTI3MzY0MiwiZXhwIjoxNjk5Mjc3MzMxLCJuYmYiOjE2OTkyNzM3MzEsImp0aSI6IlVHZEhZSWF4cXAwY0FMbmciLCJzdWIiOiI4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5h0K6w89yKqVFG-0dCht7Mzb8ai2t3WURgNC0p8TBrk",
-								"type": "text"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/auth/logout",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"auth",
-								"logout"
-							]
+						{
+							"name": "Login",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "gecepa1867@glalen.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Muhammad16022",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/user/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIvcmVmcmVzaCIsImlhdCI6MTY5OTUyMzg1MCwiZXhwIjoxNjk5NTI3NTM2LCJuYmYiOjE2OTk1MjM5MzYsImp0aSI6IjZEd0pYTXRuc0doTmZXdTMiLCJzdWIiOiIxNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o9Skm10ryE_EeEEcmXYr2tp5mmhC0OL5OsB6AlNEgYI",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9yZWdpc3RlciIsImlhdCI6MTY5OTUyMzg1MCwiZXhwIjoxNjk5NTI3NDUwLCJuYmYiOjE2OTk1MjM4NTAsImp0aSI6IlM3d2p0OGhuRVNzQVFjUEQiLCJzdWIiOiIxNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._G1JRvSiWuBpodxazpphOsMmiKSA5CdlOs5bBX0Psjg",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/refresh",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIvcmVmcmVzaCIsImlhdCI6MTY5OTUyMzg1MCwiZXhwIjoxNjk5NTI3NTM2LCJuYmYiOjE2OTk1MjM5MzYsImp0aSI6IjZEd0pYTXRuc0doTmZXdTMiLCJzdWIiOiIxNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o9Skm10ryE_EeEEcmXYr2tp5mmhC0OL5OsB6AlNEgYI",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "Quote Requests",
+					"item": [
+						{
+							"name": "Get All by User",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9ob21lcGFnZS1yZWdpc3RlciIsImlhdCI6MTY5OTUyNTA4MCwiZXhwIjoxNjk5NTI4NjgwLCJuYmYiOjE2OTk1MjUwODAsImp0aSI6Ik85MDdYc1F1aW9FSlg3WFUiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAdR7w8UuV4OCGe2lfSWZcyvlAbGJ9HrmWACAzF7Ld8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9ob21lcGFnZS1yZWdpc3RlciIsImlhdCI6MTY5OTUyNTA4MCwiZXhwIjoxNjk5NTI4NjgwLCJuYmYiOjE2OTk1MjUwODAsImp0aSI6Ik85MDdYc1F1aW9FSlg3WFUiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAdR7w8UuV4OCGe2lfSWZcyvlAbGJ9HrmWACAzF7Ld8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/8",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Quote Request",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9ob21lcGFnZS1yZWdpc3RlciIsImlhdCI6MTY5OTUyNTA4MCwiZXhwIjoxNjk5NTI4NjgwLCJuYmYiOjE2OTk1MjUwODAsImp0aSI6Ik85MDdYc1F1aW9FSlg3WFUiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAdR7w8UuV4OCGe2lfSWZcyvlAbGJ9HrmWACAzF7Ld8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pickup",
+											"value": "2023-12-12",
+											"type": "text"
+										},
+										{
+											"key": "start_point",
+											"value": "14591",
+											"type": "text"
+										},
+										{
+											"key": "delivery_point",
+											"value": "23455",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "12x12x12 ft",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "45",
+											"type": "text"
+										},
+										{
+											"key": "pickup_time",
+											"value": "16:00:00",
+											"type": "text"
+										},
+										{
+											"key": "delivery_time",
+											"value": "16:00:00",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Radio-active Waste",
+											"type": "text"
+										},
+										{
+											"key": "vehicle_type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "reefer",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "hazmat",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lift_gate",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender_name",
+											"value": "Muhammad Haris",
+											"type": "text"
+										},
+										{
+											"key": "sender_email",
+											"value": "mharis@outlook.com",
+											"type": "text"
+										},
+										{
+											"key": "sender_phone",
+											"value": "7163241919",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/store",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Quote Request",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9ob21lcGFnZS1yZWdpc3RlciIsImlhdCI6MTY5OTUyNTA4MCwiZXhwIjoxNjk5NTI4NjgwLCJuYmYiOjE2OTk1MjUwODAsImp0aSI6Ik85MDdYc1F1aW9FSlg3WFUiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAdR7w8UuV4OCGe2lfSWZcyvlAbGJ9HrmWACAzF7Ld8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "pickup",
+											"value": "2023-12-13",
+											"type": "text"
+										},
+										{
+											"key": "start_point",
+											"value": "23455",
+											"type": "text"
+										},
+										{
+											"key": "delivery_point",
+											"value": "14512",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "12x12x12 ft",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "45",
+											"type": "text"
+										},
+										{
+											"key": "pickup_time",
+											"value": "16:00:00",
+											"type": "text"
+										},
+										{
+											"key": "delivery_time",
+											"value": "16:00:00",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Radio-active Waste",
+											"type": "text"
+										},
+										{
+											"key": "vehicle_type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "reefer",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "hazmat",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lift_gate",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sender_name",
+											"value": "Muhammad Haris",
+											"type": "text"
+										},
+										{
+											"key": "sender_email",
+											"value": "mharis@outlook.com",
+											"type": "text"
+										},
+										{
+											"key": "sender_phone",
+											"value": "7163241919",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/update",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Address Details",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9sb2dpbiIsImlhdCI6MTY5OTUyODg1MiwiZXhwIjoxNjk5NTMyNDUyLCJuYmYiOjE2OTk1Mjg4NTIsImp0aSI6IkltTFJzY09yZE5kTWFRdVMiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.e39vJwPXZmqTaSvYoz_Bp1KyTzyQUUo0Fes4zOIF8Kw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "pickup_address1",
+											"value": "1270 Diamond Springs Rd #109",
+											"type": "text"
+										},
+										{
+											"key": "pickup_address2",
+											"value": "Virginia Beach, VA 23455, USA",
+											"type": "text"
+										},
+										{
+											"key": "pickup_city",
+											"value": "Virginia Beach",
+											"type": "text"
+										},
+										{
+											"key": "pickup_state",
+											"value": "Virginia",
+											"type": "text"
+										},
+										{
+											"key": "start_point",
+											"value": "23455",
+											"type": "text"
+										},
+										{
+											"key": "sender_name",
+											"value": "Muhammad Haris",
+											"type": "text"
+										},
+										{
+											"key": "sender_phone",
+											"value": "7163241919",
+											"type": "text"
+										},
+										{
+											"key": "pickup_company",
+											"value": "NA",
+											"type": "text"
+										},
+										{
+											"key": "delivery_address1",
+											"value": "151 S Main St",
+											"type": "text"
+										},
+										{
+											"key": "delivery_address2",
+											"value": "Naples, NY 14512, USA",
+											"type": "text"
+										},
+										{
+											"key": "delivery_city",
+											"value": "Naples",
+											"type": "text"
+										},
+										{
+											"key": "delivery_state",
+											"value": "New York",
+											"type": "text"
+										},
+										{
+											"key": "delivery_point",
+											"value": "14512",
+											"type": "text"
+										},
+										{
+											"key": "delivery_name",
+											"value": "John Doe",
+											"type": "text"
+										},
+										{
+											"key": "delivery_phone",
+											"value": "7163241919",
+											"type": "text"
+										},
+										{
+											"key": "delivery_company",
+											"value": "NA",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/update-address",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										"update-address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Quote Request",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvdXNlci9ob21lcGFnZS1yZWdpc3RlciIsImlhdCI6MTY5OTUyNTA4MCwiZXhwIjoxNjk5NTI4NjgwLCJuYmYiOjE2OTk1MjUwODAsImp0aSI6Ik85MDdYc1F1aW9FSlg3WFUiLCJzdWIiOiIxNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RAdR7w8UuV4OCGe2lfSWZcyvlAbGJ9HrmWACAzF7Ld8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/request/delete",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"request",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/admin/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/admin/reset",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"admin",
+										"reset"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "jabibov534@glalen.com",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTk0NDcxMjgsImV4cCI6MTY5OTQ1MDcyOCwibmJmIjoxNjk5NDQ3MTI4LCJqdGkiOiJFZTRUTEZHQ2lZSWtac2tNIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.w24krwuN4MserM5XcYzO1Mz_-VNEyEy6BhjIaDjLk4k",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/refresh",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTk1MjI4NDgsImV4cCI6MTY5OTUyNjQ0OCwibmJmIjoxNjk5NTIyODQ4LCJqdGkiOiJWWWtHZUNVWGIyRXluMHVJIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.Td9-lY6f_-VFGKIqdtnoReyfvfggjirTuxLNFhIx0DY",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2FkbWluL3JlZnJlc2giLCJpYXQiOjE2OTk0NDcxMjgsImV4cCI6MTY5OTQ1MDc0NiwibmJmIjoxNjk5NDQ3MTQ2LCJqdGkiOiJ2TWlzRzR0RmJjYjh4bnliIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.TGQ4VWtymt6UDVoHmjFf3d7gQdqwi8fPoIXye8Mbeaw",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Courier Company",
+			"item": [
+				{
+					"name": "Courier Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Laxmi Chit Fund",
+											"type": "text"
+										},
+										{
+											"key": "address1",
+											"value": "13 Worcestshire Road",
+											"type": "text"
+										},
+										{
+											"key": "address2",
+											"value": "Bradford Av",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "London",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "England",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "United Kingdom",
+											"type": "text"
+										},
+										{
+											"key": "zip",
+											"value": "54792",
+											"type": "text"
+										},
+										{
+											"key": "company_type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "website",
+											"value": "laxmichitfund.com",
+											"type": "text"
+										},
+										{
+											"key": "drivers",
+											"value": "67",
+											"type": "text"
+										},
+										{
+											"key": "mc_number",
+											"value": "43167",
+											"type": "text"
+										},
+										{
+											"key": "dot_number",
+											"value": "55124",
+											"type": "text"
+										},
+										{
+											"key": "insurance_name",
+											"value": "Laxmi Chit Fund",
+											"type": "text"
+										},
+										{
+											"key": "gen_insurance",
+											"value": "876543",
+											"type": "text"
+										},
+										{
+											"key": "cargo_insurance",
+											"value": "6543",
+											"type": "text"
+										},
+										{
+											"key": "other_insurance",
+											"value": "76542",
+											"type": "text"
+										},
+										{
+											"key": "declaration",
+											"type": "file",
+											"src": "/C:/Users/Muhammad Arslan/Downloads/ac75b3a85e505fe0a37049441f8fb9b3.jpg"
+										},
+										{
+											"key": "contact_fname",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "contact_lname",
+											"value": "Doe",
+											"type": "text"
+										},
+										{
+											"key": "contact_title",
+											"value": "CEO",
+											"type": "text"
+										},
+										{
+											"key": "company_phone",
+											"value": "912538211",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "912538211",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jabibov534@glalen.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "qwerty123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "qwerty123",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/courier/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"courier",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "jabibov534@glalen.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "John4161",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/courier/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"courier",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "jabibov534@glalen.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/courier/reset",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"courier",
+										"reset"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "jabibov534@glalen.com",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2FkbWluL3JlZnJlc2giLCJpYXQiOjE2OTk0NDcxMjgsImV4cCI6MTY5OTQ1MDc0NiwibmJmIjoxNjk5NDQ3MTQ2LCJqdGkiOiJ2TWlzRzR0RmJjYjh4bnliIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.TGQ4VWtymt6UDVoHmjFf3d7gQdqwi8fPoIXye8Mbeaw",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/courier/refresh",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"courier",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvdXJpZXIvcmVmcmVzaCIsImlhdCI6MTY5OTQ0Mzk4NSwiZXhwIjoxNjk5NDQ3OTgzLCJuYmYiOjE2OTk0NDQzODMsImp0aSI6InZqTkZmVmxSMHREdlM5alYiLCJzdWIiOiIzIiwicHJ2IjoiZDJkZjhhZTBhNWQyZDEyOTJiNWYzNjM2Y2IwNTc4OWNjMmJiYWZkNyJ9.M1bm1Tk8hUoYe9koL_9pII7UvtjzKbDWqyR-CqFiiFk",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/courier/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"courier",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2NvdXJpZXIvcmVmcmVzaCIsImlhdCI6MTY5OTQ0Mzk4NSwiZXhwIjoxNjk5NDQ3OTgzLCJuYmYiOjE2OTk0NDQzODMsImp0aSI6InZqTkZmVmxSMHREdlM5alYiLCJzdWIiOiIzIiwicHJ2IjoiZDJkZjhhZTBhNWQyZDEyOTJiNWYzNjM2Y2IwNTc4OWNjMmJiYWZkNyJ9.M1bm1Tk8hUoYe9koL_9pII7UvtjzKbDWqyR-CqFiiFk",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/courier/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"courier",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
